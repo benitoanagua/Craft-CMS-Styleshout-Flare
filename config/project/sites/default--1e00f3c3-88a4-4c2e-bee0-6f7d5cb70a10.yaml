@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: Flare
+primary: true
+siteGroup: 278f32dc-b1d1-4efd-8374-ee4cf793fd6c # Flare
+sortOrder: 1
