@@ -1,0 +1,53 @@
+fieldLayouts:
+  c63b20c9-97d8-46a0-913c-dd7014051bc3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7147aec6-4c49-4d7c-be79-3e9e57b5991f # Office
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Address
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: abcad323-6d7b-4adf-be0a-6d902ae0a91d # Menu
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Social Nav'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: a220560a-d8bf-490b-bff0-420e311688d5 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c931aa20-ddd6-4883-ba22-04b7df849446 # Hyperlink
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Call to Action'
+        sortOrder: 3
+handle: footer
+name: Footer
