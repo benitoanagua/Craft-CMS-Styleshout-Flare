@@ -5,35 +5,59 @@
 
 <!DOCTYPE html>
 <html class="no-js" lang="{{ craft.app.language }}">
-  <head>
-    {% block head %}
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta charset="utf-8">
-      <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-      <link rel="stylesheet" href="{{ siteUrl }}assets/css/styles.css">
-      <link rel="stylesheet" href="{{ siteUrl }}assets/css/vendor.css">
+	<head>
+		{% block head %}
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta charset="utf-8">
+			<title>
+				{% if title is defined %}
+					{{ title }}
+					-
+				{% endif %}
+				{{ siteName }}</title>
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <script src="{{ siteUrl }}assets/js/modernizr.js"></script>
-      <script defer src="{{ siteUrl }}assets/js/fontawesome/all.min.js"></script>
+			<link rel="stylesheet" href="{{ siteUrl }}assets/css/styles.css">
+			<link rel="stylesheet" href="{{ siteUrl }}assets/css/vendor.css">
 
-      {# <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-      <link rel="manifest" href="site.webmanifest"> #}
-    {% endblock %}
-  </head>
+			<script src="{{ siteUrl }}assets/js/modernizr.js"></script>
+			<script defer src="{{ siteUrl }}assets/js/fontawesome/all.min.js"></script>
 
-  <body id="top">
-    {% block body %}{% endblock %}
-    {% block foot %}{% endblock %}
 
-    <script src="{{ siteUrl }}assets/js/jquery-3.2.1.min.js"></script>
-    <script src="{{ siteUrl }}assets/js/plugins.js"></script>
-    <script src="{{ siteUrl }}assets/js/main.js"></script>
+			{% for block in header.favicons.all() %}
+				{% set icon = block.icon.one() %}
+				{% if icon %}
 
-  </body>
+					{% set rel_sizes = null %}
+
+					{% if block.size == '180' %}
+						{% set rel_sizes = 'rel="apple-touch-icon" sizes="180x180"' %}
+					{% elseif block.size == '32' %}
+						{% set rel_sizes = 'rel="icon" type="image/png" sizes="32x32"' %}
+					{% elseif block.size == '16' %}
+						{% set rel_sizes = 'rel="icon" type="image/png" sizes="16x16"' %}
+					{% elseif block.size == 'ico' %}
+						{% set rel_sizes = 'rel="shortcut icon"' %}
+					{% endif %}
+
+					{% if rel_sizes is not null %}
+						<link {{ rel_sizes }} href="{{ icon.url }}">
+					{% endif %}
+
+				{% endif %}
+			{% endfor %}
+			<link rel="manifest" href="site.webmanifest">
+
+		{% endblock %}
+	</head>
+
+	<body id="top"> {% block body %}{% endblock %}{% block foot %}{% endblock %}
+
+		<script src="{{ siteUrl }}assets/js/jquery-3.2.1.min.js"></script>
+		<script src="{{ siteUrl }}assets/js/plugins.js"></script>
+		<script src="{{ siteUrl }}assets/js/main.js"></script>
+
+	</body>
 </html>

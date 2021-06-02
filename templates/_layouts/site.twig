@@ -16,47 +16,32 @@
 	</div>
 
 	<header id="header" class="s-header">
-
 		<div class="s-header__logo">
 			<a href="index.html">
-				<img src="https://via.placeholder.com/68x32?text=FLARE" alt="Homepage">
+				<img src="{{ header.logotype.one().getUrl }}" alt="Homepage">
 			</a>
 		</div>
 
 		<div class="s-header__content">
-
 			<nav class="s-header__nav-wrap">
 				<ul class="s-header__nav">
-					<li>
-						<a class="smoothscroll" href="#hero" title="Intro">Home</a>
-					</li>
-					<li>
-						<a class="smoothscroll" href="#about" title="About">About</a>
-					</li>
-					<li>
-						<a class="smoothscroll" href="#services" title="Services">Services</a>
-					</li>
-					<li>
-						<a class="smoothscroll" href="#portfolio" title="Works">Works</a>
-					</li>
+					{% for block in header.menu.all() %}
+						<li>
+							<a class="smoothscroll" href="{{ block.hyperlink }}" title="{{ block.caption }}">{{ block.caption }}</a>
+						</li>
+					{% endfor %}
 				</ul>
 			</nav>
-			<!-- end s-header__nav-wrap -->
-
-			<a href="mailto:#0" class="btn btn--primary btn--small">
+			<a href="mailto:{{ header.hyperlink }}" class="btn btn--primary btn--small">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
-				Get In Touch
+				{{ header.caption }}
 			</a>
-
 		</div>
-		<!-- end header-content -->
 
 		<a class="s-header__menu-toggle" href="#0">
 			<span>Menu</span>
 		</a>
-
 	</header>
-	<!-- end s-header -->
 
 	<main id="main" role="main">
 		{% block main %}{% endblock %}

@@ -34,4 +34,13 @@ return [
 
     // Whether crawlers should be allowed to index pages and following links
     'disallowRobots' => !$isProd,
+                
+    'aliases' => [
+        '@assetBasePath' => getenv('ASSET_BASE_PATH'),
+        '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
+    ],
+
+    'allowedFileExtensions' => [
+        'ico',
+    ],
 ];
