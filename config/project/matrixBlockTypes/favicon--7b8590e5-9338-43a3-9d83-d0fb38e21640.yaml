@@ -1,0 +1,141 @@
+field: 11a1dd13-8f78-443a-a489-05e3cd768ac8 # Favicons
+fieldLayouts:
+  6cb87dc4-874a-4d8e-b4c0-a830de3afa01:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a715d2fa-4a49-4753-a6a3-f597d773ff31 # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cf980bcd-2897-41a6-8710-9e1ba33d8bc7 # Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  a715d2fa-4a49-4753-a6a3-f597d773ff31: # Icon
+    contentColumnType: string
+    fieldGroup: null
+    handle: icon
+    instructions: ''
+    name: Icon
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:febc00ea-0cb7-4ada-9e01-ca7a01332cba' # Logotypes
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:febc00ea-0cb7-4ada-9e01-ca7a01332cba' # Logotypes
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  cf980bcd-2897-41a6-8710-9e1ba33d8bc7: # Size
+    contentColumnType: string
+    fieldGroup: null
+    handle: size
+    instructions: ''
+    name: Size
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Android Chrome 512'
+            -
+              - value
+              - '512'
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Android Chrome 192'
+            -
+              - value
+              - '192'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Apple Touch Icon'
+            -
+              - value
+              - '180'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Favicon 32'
+            -
+              - value
+              - '32'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Favicon 16'
+            -
+              - value
+              - '16'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Favicon
+            -
+              - value
+              - ico
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: favicon
+name: favicon
+sortOrder: 1

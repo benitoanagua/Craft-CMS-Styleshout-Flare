@@ -1,0 +1,66 @@
+fieldLayouts:
+  8bece5ec-1323-4120-8c3f-0303964a23ae:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3df3003d-04c0-45d6-9e45-5d0bf07a0a0f # Logotype
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Global
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 11a1dd13-8f78-443a-a489-05e3cd768ac8 # Favicons
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Favicon
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: a220560a-d8bf-490b-bff0-420e311688d5 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c931aa20-ddd6-4883-ba22-04b7df849446 # Hyperlink
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Call to Action'
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: abcad323-6d7b-4adf-be0a-6d902ae0a91d # Menu
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Main Menu'
+        sortOrder: 4
+handle: header
+name: Header
