@@ -1,0 +1,106 @@
+field: 7147aec6-4c49-4d7c-be79-3e9e57b5991f # Office
+fieldLayouts:
+  21104bb0-5e1f-499d-80bc-9eb44014dfd2:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: da3eb716-b972-4921-a6be-046765e50ae5 # Kind
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fe2b0a98-b797-441b-8e3d-5c1177236ca5 # Property
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  da3eb716-b972-4921-a6be-046765e50ae5: # Kind
+    contentColumnType: string
+    fieldGroup: null
+    handle: kind
+    instructions: ''
+    name: Kind
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - City
+            -
+              - value
+              - city
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Street
+            -
+              - value
+              - street
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Phone
+            -
+              - value
+              - phone
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - mailbox
+            -
+              - value
+              - mailbox
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  fe2b0a98-b797-441b-8e3d-5c1177236ca5: # Property
+    contentColumnType: text
+    fieldGroup: null
+    handle: property
+    instructions: ''
+    name: Property
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: address
+name: Address
+sortOrder: 1
