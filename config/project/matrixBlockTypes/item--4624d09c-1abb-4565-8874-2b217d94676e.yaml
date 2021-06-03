@@ -22,9 +22,37 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 9b60f33c-05a5-485d-bd65-3eb4bb3ab1e4 # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
+  9b60f33c-05a5-485d-bd65-3eb4bb3ab1e4: # Icon
+    contentColumnType: text
+    fieldGroup: null
+    handle: icon
+    instructions: ''
+    name: Icon
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   142e272e-62fe-4459-80f7-7568b9b54c2e: # Hyperlink
     contentColumnType: text
     fieldGroup: null

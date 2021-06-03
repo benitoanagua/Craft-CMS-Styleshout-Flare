@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: sectors
+name: Sectors
+propagationMethod: all
+siteSettings:
+  1e00f3c3-88a4-4c2e-bee0-6f7d5cb70a10: # Flare
+    enabledByDefault: true
+    hasUrls: true
+    template: sector/_entry
+    uriFormat: 'sector/{slug}'
+type: channel

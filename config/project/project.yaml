@@ -1,8 +1,13 @@
-dateModified: 1622603974
+dateModified: 1622723423
 email:
   fromEmail: benito.anagua@gmail.com
   fromName: Flare
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true
