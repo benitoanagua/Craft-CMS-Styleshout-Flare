@@ -44,6 +44,19 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: 1c6fe872-b1b5-4713-9fb6-36bb532706b4 # Services
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Services
+        sortOrder: 3
+      -
+        elements:
+          -
             fieldUid: a220560a-d8bf-490b-bff0-420e311688d5 # Caption
             instructions: null
             label: null
@@ -62,7 +75,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: 'Play Video'
-        sortOrder: 3
+        sortOrder: 4
 handle: homePage
 hasTitleField: false
 name: 'Home Page'
