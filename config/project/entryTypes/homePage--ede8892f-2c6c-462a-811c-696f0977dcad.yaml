@@ -1,18 +1,32 @@
 fieldLayouts:
-  c63b20c9-97d8-46a0-913c-dd7014051bc3:
+  2424b78f-be4c-4e0c-af39-22061fd73047:
     tabs:
       -
         elements:
           -
-            fieldUid: 7147aec6-4c49-4d7c-be79-3e9e57b5991f # Office
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
             instructions: null
             label: null
-            required: false
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-        name: Address
+        name: Content
         sortOrder: 1
       -
         elements:
@@ -34,7 +48,13 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: 'Call to Action'
+        name: 'Play Video'
         sortOrder: 2
-handle: footer
-name: Footer
+handle: homePage
+hasTitleField: false
+name: 'Home Page'
+section: 5e14f7da-7fab-4337-9b3a-2dbb70ffd892 # Home Page
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

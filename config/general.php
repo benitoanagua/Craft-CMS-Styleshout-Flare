@@ -40,7 +40,18 @@ return [
         '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
     ],
 
-    'allowedFileExtensions' => [
+    'extraAllowedFileExtensions' => [
         'ico',
+    ],
+
+    'extraFileKinds' => [
+        'svg' => [
+            'label' => 'SVG',
+            'extensions' => ['svg'],
+        ],
+        'ico' => [
+            'label' => 'ICO',
+            'extensions' => ['ico'],
+        ],
     ],
 ];

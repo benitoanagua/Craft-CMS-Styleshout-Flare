@@ -1,0 +1,18 @@
+fieldLayouts:
+  dcd9b293-e845-4dff-ae94-ade909ccd975:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: abcad323-6d7b-4adf-be0a-6d902ae0a91d # Menu
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Social
+        sortOrder: 1
+handle: socialNav
+name: 'Social Nav'
