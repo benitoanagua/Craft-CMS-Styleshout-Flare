@@ -1,0 +1,7 @@
+{% macro removeTagP(string) %}
+	{% set extract = string | replace({
+        '<p>': '',
+        '</p>': ''
+    }) %}
+	{{ extract | raw }}
+{% endmacro %}
