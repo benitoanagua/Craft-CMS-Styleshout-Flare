@@ -1,27 +1,24 @@
 {% import "_utils/filters" as utils %}
 {% set tag = craft.tags.title('contact') %}
-{% set contacts = craft.entries().relatedTo(tag).all() %}
+{% set contact = craft.entries().relatedTo(tag).one() %}
 
-{% if contacts|length %}
-	{% for contact in contacts %}
+{% if contact %}
+	<section id="contact" class="s-contact">
 
-		<section id="contact" class="s-contact">
-
-			<div class="row narrower s-contact__top h-text-center">
-				<div class="column">
-					<h3 class="h6">{{ contact.title }}</h3>
-					<h1 class="display-1">{{ utils.removeTagP( contact.description ) }}</h1>
-				</div>
+		<div class="row narrower s-contact__top h-text-center">
+			<div class="column">
+				<h3 class="h6">{{ contact.title }}</h3>
+				<h1 class="display-1">{{ utils.removeTagP( contact.description ) }}</h1>
 			</div>
+		</div>
 
-			<div class="row h-text-center">
-				<div class="column">
-					<p class="s-contact__email">
-						<a href="mailto:#0">{{ contact.caption }}</a>
-					</p>
-				</div>
+		<div class="row h-text-center">
+			<div class="column">
+				<p class="s-contact__email">
+					<a href="mailto:#0">{{ contact.caption }}</a>
+				</p>
 			</div>
+		</div>
 
-		</section>
-	{% endfor %}
+	</section>
 {% endif %}
