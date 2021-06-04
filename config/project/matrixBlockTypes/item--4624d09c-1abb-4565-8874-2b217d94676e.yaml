@@ -93,4 +93,4 @@ fields:
     type: craft\fields\PlainText
 handle: item
 name: Item
-sortOrder: 1
+sortOrder: 2
