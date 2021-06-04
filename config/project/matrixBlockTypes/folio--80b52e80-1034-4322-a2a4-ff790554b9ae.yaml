@@ -1,0 +1,288 @@
+field: 1ed7075e-13cf-4a7b-9641-3eac2e130ce5 # Portfolio
+fieldLayouts:
+  852657db-9f39-4b80-8ec0-e225430a7a72:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f43f331d-31cd-4b51-8cef-2127c175d3b4 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: d831fe25-ce30-4ff5-95d6-61a8ce2ddbf2 # Category
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 916eaaa3-67a6-4502-8db7-0b1c0ef7789d # Project
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: c4e4235e-877b-45a7-89ff-b54e138b2d17 # HyperLink
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 302676b6-7a8f-4bdd-88d7-87e82a569026 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 701a9b66-586b-4260-bc3b-009a77a6d3d3 # Full
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 53111f06-962f-4c3d-8430-cfefb4d8a4a5 # Regular
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 3a2e75a2-4462-43c6-8db6-64d5aef548e8 # Retina
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+        name: Content
+        sortOrder: 1
+fields:
+  3a2e75a2-4462-43c6-8db6-64d5aef548e8: # Retina
+    contentColumnType: string
+    fieldGroup: null
+    handle: retina
+    instructions: ''
+    name: Retina
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e57bd544-ae5e-48e4-9e5c-a22ad56d701d' # Portfolio
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:4d5610a8-c2cd-489b-9b3c-98dc59f9888e' # Featured
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  701a9b66-586b-4260-bc3b-009a77a6d3d3: # Full
+    contentColumnType: string
+    fieldGroup: null
+    handle: full
+    instructions: ''
+    name: Full
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e57bd544-ae5e-48e4-9e5c-a22ad56d701d' # Portfolio
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:4d5610a8-c2cd-489b-9b3c-98dc59f9888e' # Featured
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  916eaaa3-67a6-4502-8db7-0b1c0ef7789d: # Project
+    contentColumnType: text
+    fieldGroup: null
+    handle: project
+    instructions: ''
+    name: Project
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  53111f06-962f-4c3d-8430-cfefb4d8a4a5: # Regular
+    contentColumnType: string
+    fieldGroup: null
+    handle: regular
+    instructions: ''
+    name: Regular
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e57bd544-ae5e-48e4-9e5c-a22ad56d701d' # Portfolio
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:4d5610a8-c2cd-489b-9b3c-98dc59f9888e' # Featured
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  302676b6-7a8f-4bdd-88d7-87e82a569026: # Description
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: ''
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  c4e4235e-877b-45a7-89ff-b54e138b2d17: # HyperLink
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: hyperlink
+    instructions: ''
+    name: HyperLink
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  d831fe25-ce30-4ff5-95d6-61a8ce2ddbf2: # Category
+    contentColumnType: string
+    fieldGroup: null
+    handle: category
+    instructions: ''
+    name: Category
+    searchable: false
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      allowSelfRelations: false
+      branchLimit: '1'
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: 'group:cd85444c-6f1f-4ef8-be46-b4f3f40cdf21' # Portfolio
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  f43f331d-31cd-4b51-8cef-2127c175d3b4: # Caption
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: folio
+name: Folio
+sortOrder: 1
