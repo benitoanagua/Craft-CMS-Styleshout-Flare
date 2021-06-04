@@ -31,7 +31,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: c0197541-100f-48fd-8943-da38e9e12221 # Process
+            fieldUid: 1ed7075e-13cf-4a7b-9641-3eac2e130ce5 # Portfolio
             instructions: null
             label: null
             required: false
@@ -39,7 +39,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Process
+        name: Portfolio
         sortOrder: 2
       -
         elements:
@@ -54,6 +54,19 @@ fieldLayouts:
             width: 100
         name: Services
         sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: c0197541-100f-48fd-8943-da38e9e12221 # Process
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Process
+        sortOrder: 4
       -
         elements:
           -
@@ -75,7 +88,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: 'Play Video'
-        sortOrder: 4
+        sortOrder: 5
 handle: homePage
 hasTitleField: false
 name: 'Home Page'

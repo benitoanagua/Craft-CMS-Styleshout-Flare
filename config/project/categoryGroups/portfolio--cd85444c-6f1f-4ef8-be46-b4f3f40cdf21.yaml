@@ -1,0 +1,40 @@
+fieldLayouts:
+  a06fec4f-0371-4218-ae64-52bed76ce028:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: portfolio
+name: Portfolio
+siteSettings:
+  1e00f3c3-88a4-4c2e-bee0-6f7d5cb70a10: # Flare
+    hasUrls: true
+    template: null
+    uriFormat: 'portfolio/{slug}'
+structure:
+  maxLevels: 1
+  uid: 716a60af-a8bd-4569-b02a-8ef8bd2e7470
