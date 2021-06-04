@@ -103,4 +103,4 @@ fields:
     type: craft\fields\PlainText
 handle: address
 name: Address
-sortOrder: 1
+sortOrder: 2

@@ -1,0 +1,40 @@
+field: abcad323-6d7b-4adf-be0a-6d902ae0a91d # Menu
+fieldLayouts:
+  4e431ea9-46a0-4964-b646-6d27c174bfb6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d0447e58-7964-4909-a7c6-cd0b0700b389 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  d0447e58-7964-4909-a7c6-cd0b0700b389: # Caption
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: header
+name: header
+sortOrder: 1
