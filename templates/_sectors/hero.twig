@@ -1,5 +1,5 @@
-<!-- hero
-    ================================================== -->
+{% import "_utils/filters" as utils %}
+
 <section id="hero" class="s-hero target-section">
 	{% set hero = craft.entries.section('sectors').title('*Hero*').one() %}
 
@@ -11,11 +11,7 @@
 		<div class="column">
 			<h1>{{ hero.caption }}</h1>
 			<div class="s-hero__content-about">
-				{% set extract = hero.description | replace({
-					'<p>': '',
-					'</p>': ''
-				}) %}
-				<p>{{ extract | raw }}</p>
+				<p>{{ utils.removeTagP( hero.description ) }}</p>
 
 				<footer>
 					<div class="s-hero__content-social">
@@ -44,4 +40,3 @@
 	</div>
 
 </section>
-<!-- end s-hero -->
