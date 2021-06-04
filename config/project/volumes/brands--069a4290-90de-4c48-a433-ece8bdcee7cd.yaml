@@ -1,0 +1,40 @@
+fieldLayouts:
+  f471e1d4-6c1a-4509-b856-17aa1718d775:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: brands
+hasUrls: true
+name: Brands
+settings:
+  path: '@assetBasePath/images/brands'
+sortOrder: 5
+titleTranslationKeyFormat: null
+titleTranslationMethod: null
+type: craft\volumes\Local
+url: '@assetBaseUrl/images/brands'

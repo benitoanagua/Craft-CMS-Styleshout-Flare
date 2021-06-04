@@ -31,6 +31,19 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: 779ecba5-f02b-4cf5-b036-af99f83ec426 # Testimonials
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Testimonials
+        sortOrder: 2
+      -
+        elements:
+          -
             fieldUid: 1ed7075e-13cf-4a7b-9641-3eac2e130ce5 # Portfolio
             instructions: null
             label: null
@@ -40,7 +53,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Portfolio
-        sortOrder: 2
+        sortOrder: 3
       -
         elements:
           -
@@ -53,7 +66,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Services
-        sortOrder: 3
+        sortOrder: 4
       -
         elements:
           -
@@ -66,7 +79,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Process
-        sortOrder: 4
+        sortOrder: 5
       -
         elements:
           -
@@ -88,7 +101,20 @@ fieldLayouts:
             warning: null
             width: 100
         name: 'Play Video'
-        sortOrder: 5
+        sortOrder: 6
+      -
+        elements:
+          -
+            fieldUid: fcf95640-20ba-4747-bb97-d0a18d54944e # Brands
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Brands
+        sortOrder: 7
 handle: homePage
 hasTitleField: false
 name: 'Home Page'

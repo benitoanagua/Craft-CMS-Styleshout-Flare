@@ -1,0 +1,107 @@
+field: fcf95640-20ba-4747-bb97-d0a18d54944e # Brands
+fieldLayouts:
+  bf1092f5-fc4e-4251-a9fe-c89d5afcd836:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 47b82e32-50b6-46fe-83d2-4853d71a1975 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b98c8d5a-c740-42b8-9a7d-4135fd7350a4 # Hyperlink
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 167dfa2b-0e22-4cc0-806b-304e9304ebf7 # Logotype
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  47b82e32-50b6-46fe-83d2-4853d71a1975: # Caption
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Caption
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  167dfa2b-0e22-4cc0-806b-304e9304ebf7: # Logotype
+    contentColumnType: string
+    fieldGroup: null
+    handle: logotype
+    instructions: ''
+    name: Logotype
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+        - svg
+      defaultUploadLocationSource: 'volume:069a4290-90de-4c48-a433-ece8bdcee7cd' # Brands
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:4d5610a8-c2cd-489b-9b3c-98dc59f9888e' # Featured
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b98c8d5a-c740-42b8-9a7d-4135fd7350a4: # Hyperlink
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: hyperlink
+    instructions: ''
+    name: Hyperlink
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: company
+name: Company
+sortOrder: 1
