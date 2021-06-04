@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: 9efbeade-59dd-4c2d-89d4-8d38a46bfc50 # Common
+handle: etiquette
+instructions: ''
+name: Etiquette
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'taggroup:73f18fd1-c9ab-4de2-922a-76b51c6ffd60' # Label
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Tags

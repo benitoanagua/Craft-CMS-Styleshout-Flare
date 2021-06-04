@@ -1,43 +1,48 @@
 {% import "_utils/filters" as utils %}
+{% set tag = craft.tags.title('clients') %}
+{% set clientsAll = craft.entries().relatedTo(tag).all() %}
 
-<div id="clients" class="section s-clients">
-	{% set clients = craft.entries.section('sectors').title('*Clients*').one() %}
+{% if clientsAll|length %}
+	{% for clients in clientsAll %}
 
-	<div class="row narrower s-clients__top h-text-center">
-		<div class="column">
-			<h1 class="display-1" data-aos="fade-up">{{ clients.caption }}</h1>
-		</div>
-	</div>
-
-	<div class="row clients-outer">
-		<div class="column">
-			<div class="clients" data-aos="fade-up">
-				{% for block in entry.brands.all() %}
-					<a href="{{ block.hyperlink }}" title="{{ block.caption }}" class="clients__slide">
-						<img src="{{ block.logotype.one().getUrl }}"/>
-					</a>
-				{% endfor %}
+		<div id="clients" class="section s-clients">
+			<div class="row narrower s-clients__top h-text-center">
+				<div class="column">
+					<h1 class="display-1" data-aos="fade-up">{{ clients.caption }}</h1>
+				</div>
 			</div>
-		</div>
-	</div>
 
-	<div class="row testimonials collapse">
-		<div class="column large-12">
-			<div class="testimonial-slider" data-aos="fade-up">
-				{% for block in entry.testimonials.all() %}
-					<div class="testimonial-slider__slide">
-						<p>{{ utils.removeTagP( block.cite ) }}</p>
-						<div class="testimonial-slider__author">
-							<img src="{{ block.avatar.one().getUrl }}" alt="{{ block.author }}" class="testimonial-slider__avatar">
-							<cite class="testimonial-slider__cite">
-								<strong>{{ block.author }}</strong>
-								<span>{{ block.company }}</span>
-							</cite>
-						</div>
+			<div class="row clients-outer">
+				<div class="column">
+					<div class="clients" data-aos="fade-up">
+						{% for block in entry.brands.all() %}
+							<a href="{{ block.hyperlink }}" title="{{ block.caption }}" class="clients__slide">
+								<img src="{{ block.logotype.one().getUrl }}"/>
+							</a>
+						{% endfor %}
 					</div>
-				{% endfor %}
+				</div>
 			</div>
-		</div>
-	</div>
 
-</div>
+			<div class="row testimonials collapse">
+				<div class="column large-12">
+					<div class="testimonial-slider" data-aos="fade-up">
+						{% for block in entry.testimonials.all() %}
+							<div class="testimonial-slider__slide">
+								<p>{{ utils.removeTagP( block.cite ) }}</p>
+								<div class="testimonial-slider__author">
+									<img src="{{ block.avatar.one().getUrl }}" alt="{{ block.author }}" class="testimonial-slider__avatar">
+									<cite class="testimonial-slider__cite">
+										<strong>{{ block.author }}</strong>
+										<span>{{ block.company }}</span>
+									</cite>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+
+		</div>
+	{% endfor %}
+{% endif %}

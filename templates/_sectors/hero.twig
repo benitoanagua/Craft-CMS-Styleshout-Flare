@@ -1,42 +1,47 @@
 {% import "_utils/filters" as utils %}
+{% set tag = craft.tags.title('hero') %}
+{% set heroes = craft.entries().relatedTo(tag).all() %}
 
-<section id="hero" class="s-hero target-section">
-	{% set hero = craft.entries.section('sectors').title('*Hero*').one() %}
+{% if heroes|length %}
+	{% for hero in heroes %}
+		<section id="hero" class="s-hero target-section">
 
-	<div class="s-hero__bg" style="background-image: url({{ hero.featuredImage.one().getUrl }});">
-		<div class="gradient-overlay"></div>
-	</div>
-
-	<div class="row s-hero__content">
-		<div class="column">
-			<h1>{{ hero.caption }}</h1>
-			<div class="s-hero__content-about">
-				<p>{{ utils.removeTagP( hero.description ) }}</p>
-
-				<footer>
-					<div class="s-hero__content-social">
-						{% for block in socialNav.menu.all() %}
-							<a href="{{ block.hyperlink }}">
-								<i class="fab {{ block.icon }}" aria-hidden="true"></i>
-							</a>
-						{% endfor %}
-					</div>
-				</footer>
+			<div class="s-hero__bg" style="background-image: url({{ hero.featuredImage.one().getUrl }});">
+				<div class="gradient-overlay"></div>
 			</div>
-		</div>
-	</div>
 
-	<div class="s-hero__video">
-		<a class="s-hero__video-link" href="{{ entry.hyperlink }}" data-lity="">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
-			<span class="s-hero__video-text">{{ entry.caption }}</span>
-		</a>
-	</div>
+			<div class="row s-hero__content">
+				<div class="column">
+					<h1>{{ hero.caption }}</h1>
+					<div class="s-hero__content-about">
+						<p>{{ utils.removeTagP( hero.description ) }}</p>
 
-	<div class="s-hero__scroll">
-		<a href="#about" class="s-hero__scroll-link smoothscroll">
-			Scroll Down
-		</a>
-	</div>
+						<footer>
+							<div class="s-hero__content-social">
+								{% for block in socialNav.menu.all() %}
+									<a href="{{ block.hyperlink }}">
+										<i class="fab {{ block.icon }}" aria-hidden="true"></i>
+									</a>
+								{% endfor %}
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
 
-</section>
+			<div class="s-hero__video">
+				<a class="s-hero__video-link" href="{{ entry.hyperlink }}" data-lity="">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
+					<span class="s-hero__video-text">{{ entry.caption }}</span>
+				</a>
+			</div>
+
+			<div class="s-hero__scroll">
+				<a href="#about" class="s-hero__scroll-link smoothscroll">
+					Scroll Down
+				</a>
+			</div>
+
+		</section>
+	{% endfor %}
+{% endif %}

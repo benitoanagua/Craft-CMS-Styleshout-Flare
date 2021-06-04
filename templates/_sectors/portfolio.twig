@@ -1,41 +1,47 @@
 {% import "_utils/filters" as utils %}
+{% set tag = craft.tags.title('portfolio') %}
+{% set portfolios = craft.entries().relatedTo(tag).all() %}
 
-<section id="portfolio" class="s-portfolio">
-	{% set portfolio = craft.entries.section('sectors').title('*Works*').one() %}
-	<div class="row s-porfolio__top">
-		<div class="column large-6 w-900-stack">
-			<div class="section-title" data-num="03" data-aos="fade-up">
-				<h3 class="h6">{{ portfolio.title }}</h3>
-			</div>
-		</div>
-		<div class="column large-6 w-900-stack">
-			<h1 class="display-1" data-aos="fade-up">{{ portfolio.caption }}</h1>
-		</div>
-	</div>
+{% if portfolios|length %}
+	{% for portfolio in portfolios %}
 
-	<div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
-		{% for block in entry.portfolio.all() %}
-			<div class="column" data-aos="fade-up">
-				<div class="folio-item">
-					<div class="folio-item__thumb">
-						<a class="folio-item__thumb-link" href="{{ block.full.one().getUrl }}" title="{{ block.caption }}" data-size="1050x700">
-							<img src="{{ block.regular.one().getUrl }}" srcset="{{ block.regular.one().getUrl }} 1x, {{ block.retina.one().getUrl }} 2x" alt="">
-						</a>
-					</div>
-					<div class="folio-item__info">
-						<div class="folio-item__cat">
-							{% for block in block.category.all() %}
-								{{ block.title }}
-							{% endfor %}
-						</div>
-						<h4 class="folio-item__title">{{ block.caption }}</h4>
-					</div>
-					<a href="{{ block.hyperlink }}" title="{{ block.project }}" class="folio-item__project-link">{{ block.project }}</a>
-					<div class="folio-item__caption">
-						<p>{{ utils.removeTagP( block.description ) }}</p>
+		<section id="portfolio" class="s-portfolio">
+			<div class="row s-porfolio__top">
+				<div class="column large-6 w-900-stack">
+					<div class="section-title" data-num="03" data-aos="fade-up">
+						<h3 class="h6">{{ portfolio.title }}</h3>
 					</div>
 				</div>
+				<div class="column large-6 w-900-stack">
+					<h1 class="display-1" data-aos="fade-up">{{ portfolio.caption }}</h1>
+				</div>
 			</div>
-		{% endfor %}
-	</div>
-</section>
+
+			<div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+				{% for block in entry.portfolio.all() %}
+					<div class="column" data-aos="fade-up">
+						<div class="folio-item">
+							<div class="folio-item__thumb">
+								<a class="folio-item__thumb-link" href="{{ block.full.one().getUrl }}" title="{{ block.caption }}" data-size="1050x700">
+									<img src="{{ block.regular.one().getUrl }}" srcset="{{ block.regular.one().getUrl }} 1x, {{ block.retina.one().getUrl }} 2x" alt="">
+								</a>
+							</div>
+							<div class="folio-item__info">
+								<div class="folio-item__cat">
+									{% for block in block.category.all() %}
+										{{ block.title }}
+									{% endfor %}
+								</div>
+								<h4 class="folio-item__title">{{ block.caption }}</h4>
+							</div>
+							<a href="{{ block.hyperlink }}" title="{{ block.project }}" class="folio-item__project-link">{{ block.project }}</a>
+							<div class="folio-item__caption">
+								<p>{{ utils.removeTagP( block.description ) }}</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+	{% endfor %}
+{% endif %}
