@@ -35,23 +35,29 @@ If you want to install the site locally, follow these instructions:
 1. Download/clone the repo on your computer:
 
    ```bash
-   https://github.com/benitoanagua/Craft-CMS-Styleshout-Flare.git
+   https://github.com/benitoanagua/Craft-CMS-Styleshout-Flare.git flare
    ```
 
 2. Run `composer install` within the clone:
 
    ```bash
-   cd Craft-CMS-Styleshout-Flare
+   cd flare
    composer install
    ```
 
-3. Copy the `.env.example` file at the root of the project to `.env`, and set its `DB_SERVER`, `DB_USER`, and `DB_PASSWORD` (`PRIMARY_SITE_URL=http://localhost:3000`) variables to the correct values.
+3. Create mysql database with collation `utf8mb4`:
+
+   ```bash
+   mariadb -u root -p -e "CREATE DATABASE flare charset=utf8mb4;"
+   ```
+
+4. Copy the `.env.example` file at the root of the project to `.env`, and set its `DB_SERVER`, `DB_USER`, and `DB_PASSWORD` (`PRIMARY_SITE_URL=http://localhost:3000`) variables to the correct values.
 
    ```bash
    cp .env.example .env
    ```
 
-4. Ensure that the following files and directories have permissions that will allow PHP to read and write to them:
+5. Ensure that the following files and directories have permissions that will allow PHP to read and write to them:
 
    - `.env`
    - `composer.json`
@@ -63,24 +69,23 @@ If you want to install the site locally, follow these instructions:
 
    Set the [File Permissions](https://craftcms.com/docs/3.x/installation.html#directory-structure)
 
-5. Run this command in the CLI from your project's root to automatically generate a [security key](https://craftcms.com/docs/3.x/installation.html#set-the-key-from-your-terminal) and [application ID](https://craftcms.com/docs/3.x/config/#cache-component) for the site:
+6. Run this command in the CLI from your project's root to automatically generate a [security key](https://craftcms.com/docs/3.x/installation.html#set-the-key-from-your-terminal) and [application ID](https://craftcms.com/docs/3.x/config/#cache-component) for the site:
 
    ```bash
    php craft setup/security-key
    php craft setup/app-id
    ```
 
-6. Create a new MySQL database called `flare`, and import `flare.sql` into it, something like this.
+7. Create a new MySQL database called `flare`, and import `flare.sql` into it, something like this.
 
    ```bash
    mariadb -u root -p flare < flare.sql
    ```
 
-7. Enter the directory and run the internal php web server.
+8. Enter the directory and run the internal php web server.
 
    ```bash
-   cd web/
-   php -S localhost:3000
+   php -S localhost:3000 -t web
    ```
 
 ## Logging in
