@@ -36,5 +36,5 @@ siteSettings:
     template: null
     uriFormat: 'portfolio/{slug}'
 structure:
-  maxLevels: 1
+  maxLevels: null
   uid: 716a60af-a8bd-4569-b02a-8ef8bd2e7470

@@ -26,8 +26,10 @@
 						</div>
 						<div class="folio-item__info">
 							<div class="folio-item__cat">
-								{% for block in block.category.all() %}
+								{% set cats = block.category.all() %}
+								{% for block in cats %}
 									{{ block.title }}
+									{% if loop.index < cats | length %} ─ {% endif %}
 								{% endfor %}
 							</div>
 							<h4 class="folio-item__title">{{ block.caption }}</h4>

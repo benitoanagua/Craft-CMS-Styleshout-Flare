@@ -251,7 +251,7 @@ fields:
       allowLimit: false
       allowMultipleSources: false
       allowSelfRelations: false
-      branchLimit: '1'
+      branchLimit: '2'
       limit: null
       localizeRelations: false
       selectionLabel: ''
