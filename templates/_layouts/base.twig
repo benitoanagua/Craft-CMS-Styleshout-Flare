@@ -25,28 +25,22 @@
 			<script src="{{ siteUrl }}assets/js/modernizr.js"></script>
 			<script defer src="{{ siteUrl }}assets/js/fontawesome/all.min.js"></script>
 
-
 			{% for block in header.favicons.all() %}
 				{% set icon = block.icon.one() %}
+				
 				{% if icon %}
-
-					{% set rel_sizes = null %}
-
 					{% if block.size == '180' %}
-						{% set rel_sizes = 'rel="apple-touch-icon" sizes="180x180"' %}
+						{% set rel_sizes = "" %}
+						<link rel="apple-touch-icon" sizes="180x180" href="{{ icon.url }}">
 					{% elseif block.size == '32' %}
-						{% set rel_sizes = 'rel="icon" type="image/png" sizes="32x32"' %}
+						<link rel="icon" type="image/png" sizes="32x32" href="{{ icon.url }}">
 					{% elseif block.size == '16' %}
-						{% set rel_sizes = 'rel="icon" type="image/png" sizes="16x16"' %}
+						<link rel="icon" type="image/png" sizes="16x16" href="{{ icon.url }}">
 					{% elseif block.size == 'ico' %}
-						{% set rel_sizes = 'rel="shortcut icon"' %}
+						<link rel="shortcut icon" href="{{ icon.url }}">
 					{% endif %}
-
-					{% if rel_sizes is not null %}
-						<link {{ rel_sizes }} href="{{ icon.url }}">
-					{% endif %}
-
 				{% endif %}
+
 			{% endfor %}
 			<link rel="manifest" href="site.webmanifest">
 
