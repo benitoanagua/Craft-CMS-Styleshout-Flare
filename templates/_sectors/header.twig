@@ -1,6 +1,6 @@
 <header id="header" class="s-header">
 	<div class="s-header__logo">
-		<a href="index.html">
+		<a href="{{ siteUrl }}">
 			<img src="{{ header.logotype.one().getUrl }}" alt="Homepage">
 		</a>
 	</div>
@@ -10,7 +10,7 @@
 			<ul class="s-header__nav">
 				{% for block in header.menu.all() %}
 					<li>
-						<a class="smoothscroll" href="{{ block.hyperlink }}" title="{{ block.caption }}">{{ block.caption }}</a>
+						<a class="smoothscroll" href="{{ siteUrl }}{{ block.hyperlink }}" title="{{ block.caption }}">{{ block.caption }}</a>
 					</li>
 				{% endfor %}
 			</ul>
